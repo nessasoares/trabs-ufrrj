@@ -1,0 +1,23 @@
+package ts.ambiente;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import dao.AmbienteDAO;
+import dao.ComodoDAO;
+import entidades.Comodo;
+
+public class ListarAmbiente_TS {
+
+	public List<Comodo>  execute(){
+		List<Comodo> l = null ; 
+		try {
+			l =AmbienteDAO.listaAmbiente();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return l;
+	}
+}

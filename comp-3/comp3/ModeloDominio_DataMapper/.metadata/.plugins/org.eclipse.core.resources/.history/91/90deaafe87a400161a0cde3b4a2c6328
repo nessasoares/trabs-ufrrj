@@ -1,0 +1,50 @@
+package md;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import dao.AmbienteDAO;
+import dao.ComodoDAO;
+import entidades.Ambiente;
+import entidades.ItemVenda;
+
+public class AmbienteMD {
+
+	public void criar(int paredes, int portas, float metragem, ArrayList<ItemVenda> iv){
+		Ambiente a = null; 
+		try {
+			a = new Ambiente(paredes, portas, metragem);
+			float custo = a.custo(iv);
+			AmbienteDAO.insereAmbiente(a, custo);
+			a.tempoEntrega();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public List<Ambiente>  get(){
+		List<Ambiente> l = null ; 
+		try {
+			l =AmbienteDAO.selectAmbiente();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return l;
+	}
+	
+	public List<Ambiente>  listar(){
+		List<Ambiente> l = null ; 
+		try {
+			l =AmbienteDAO.listaAmbiente();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return l;
+	}
+}

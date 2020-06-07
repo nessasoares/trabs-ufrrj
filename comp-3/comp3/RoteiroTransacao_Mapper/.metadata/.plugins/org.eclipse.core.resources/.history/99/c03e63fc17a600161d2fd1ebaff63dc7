@@ -1,0 +1,34 @@
+package ts.comodo;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import entidades.Comodo;
+import entidades.*;
+import mapper.ComodoCompostoMAPPER;
+import mapper.ComodoMAPPER;
+
+public class CriarComodo_TS {
+
+	public void execute(String desc, String tipo){
+		Comodo c;
+		try {
+			switch(tipo){
+			case "Quarto":
+					c = new Quarto(desc);
+			case "Sala":
+				
+			case "Cozinha":
+				
+			case "ComodoComposto":
+			}
+			ComodoMAPPER.insereComodo(desc, tipo);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

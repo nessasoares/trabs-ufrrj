@@ -1,0 +1,24 @@
+package tm;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import dao.AmbienteDAO;
+import entidades.Ambiente;
+import entidades.ItemVenda;
+
+public class Ambiente_TM {
+
+	public void Criar(int paredes, int portas, float metragem, ArrayList<ItemVenda> iv){
+		Ambiente a = null; 
+		try {
+			a = new Ambiente(paredes, portas, metragem);
+			float custo = a.custo(iv);
+			AmbienteDAO.insereAmbiente(a, custo);
+			a.tempoEntrega();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

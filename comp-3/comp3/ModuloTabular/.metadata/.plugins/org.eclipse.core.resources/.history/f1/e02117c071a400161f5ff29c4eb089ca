@@ -1,0 +1,17 @@
+package ts.contrato;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import dao.ComodoDAO;
+import dao.ContratoDAO;
+import entidades.*;
+
+public class UpdateContrato_TS {
+
+	public void execute(float comissao, List<Ambiente> ambientes){
+		float valor = Contrato.valorContrato(ambientes, comissao);
+		int prazo = Contrato.prazo(ambientes);
+	}
+	
+}

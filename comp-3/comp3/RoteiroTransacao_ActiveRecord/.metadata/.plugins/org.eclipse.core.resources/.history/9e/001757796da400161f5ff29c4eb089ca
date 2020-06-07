@@ -1,0 +1,24 @@
+package ts.comodo;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import dao.ComodoDAO;
+import dao.MobiliaDAO;
+import entidades.Comodo;
+
+public class GetComodos_TS {
+
+	public List<Comodo> execute(String id){
+		List<Comodo> l = new ArrayList<>();
+		try {
+			l = MobiliaDAO.getComodos(id);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return l;
+	}
+	
+}

@@ -1,0 +1,74 @@
+package controladores.comodo;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import dao.ComodoCompostoDAO;
+import dao.ComodoDAO;
+import dao.CozinhaDAO;
+import entidades.Comodo;
+import ts.comodo.*;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+
+@WebServlet("/AlterarComodo")
+public class AlterarComodoSL extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+    private AlterarComodo_TS alterar;
+    private DeletarComodo_TS deletar;
+
+
+    
+    public AlterarComodoSL() {
+    	alterar = new AlterarComodo_TS();
+    	deletar = new DeletarComodo_TS();
+
+        // TODO Auto-generated constructor stub
+    }
+
+    
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+    	String i = request.getParameter("id"); //id
+    	String path = ""; 
+		RequestDispatcher rd = null;
+		String m = request.getParameter("method"); 
+		String new_desc = request.getParameter("desc");
+		
+		if(m.equals("delete")){
+			try {
+				ComodoDAO.deleteComodo(id);
+				path = "/ListarComodoSL";
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				path = "/CriarComodo";
+			}
+		}else{
+			try {
+				ComodoDAO.alterComodo(id, desc);
+				path = "/ListarComodoSL";
+
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				path = "/CriarComodo";
+			}finally{
+			rd = getServletContext().getRequestDispatcher(path);
+		    rd.forward(request, response);
+		}
+	}
+	
+
+
+

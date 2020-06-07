@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet"/>
+      
+<title>Projeto _ Comp3</title>
+
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">Proj_Comp3</a>
+	    </div>
+	
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+	      <ul class="nav navbar-nav">
+	        <li><a href="#">Home <span class="sr-only">(current)</span></a></li>
+	        <li class="active"><a href="CriarAmbiente.jsp">Criar Ambiente</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="login.jsp">Logout</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	
+</head>
+<body>
+ <div class="col-lg-3 col-lg-offset-4" >
+	<h3><center><font face="Calibri" color="gray">Criação de Ambientes </font> </center></h3>
+	<h5><center><font face="Calibri" color="gray">Preencha com as informações sobre o ambiente a ser criado. </font> </center></h5><br>
+		
+	<form method="get" action="ListarTabela.jsp">	
+		<div class="form-group">
+		  <label class="control-label" for="focusedInput">Número de paredes: </label>
+		  <input class="form-control" id="numParedes" type="number">
+		</div>
+		
+		<div class="form-group">
+		  <label class="control-label" for="focusedInput">Número de Portas: </label>
+		  <input class="form-control" id="numPortas" type="number">
+		</div>
+		
+		<div class="form-group">
+		  <label class="control-label" for="focusedInput">Metragem do ambiente (m²): </label>
+		  <input class="form-control" id="metragem" type="number">
+		</div>
+		
+		<input type ='submit' class="btn btn-default" value='Enviar'/>
+	</form>
+</div>
+</center>	
+</body>
+</html>

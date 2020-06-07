@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/10/2015 22:52:58 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="br.recomendacao.livros.Usuario" table="USUARIO">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="nome" type="java.lang.String">
+            <column name="NOME" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
+        </property>
+        <property name="username" type="java.lang.String">
+            <column name="USERNAME" />
+        </property>
+        <property name="senha" type="java.lang.String">
+            <column name="SENHA" />
+        </property>
+        <property name="genero" type="java.lang.String">
+            <column name="GENERO" />
+        </property>
+    </class>
+</hibernate-mapping>

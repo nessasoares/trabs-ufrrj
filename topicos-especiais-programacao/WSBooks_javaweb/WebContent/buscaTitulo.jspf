@@ -1,0 +1,67 @@
+
+<style type="text/css">
+#buscado {
+  
+  margin-left: -190%;
+  margin-top: 10%;
+  width: 100px;
+}
+</style>
+
+
+
+<form class="navbar-form navbar-left" role="search" method='get' action='servletBuscaLivro'  accept-charset="UTF-8">
+     <div class="form-group">
+         <input type="text"  name= "titulo" id="inputTitulo"  class="form-control" placeholder="digite o título do livro">
+          <script type="text/javascript">         
+       
+            $("#inputTitulo").autocomplete({  
+                source:"autoCompleteTitulo.jsp",  
+                minLength: 2 
+                //selectFirst: false    
+            });    
+          
+    </script> 
+     </div>
+     <button type="submit" class="btn btn-default">Buscar</button>                              
+     <br>
+     <div class="sidebar blog-sidebar">
+         <div class="sidebar-item  recent">
+             
+             <c:if test="${not empty listaLivroTitulo}">
+             <c:forEach var = "book" items = "${listaLivroTitulo}" >
+                <div class="media">
+                  <c:set var="idval" value="${book.id}"/> 
+                  
+                   <div class="media-body">
+                         <h4><a href="servletDetalhaLivro?id=<c:out value="${idval}"/>">${book.titulo}</a></h4>
+                         <p>${book.autor}</p>
+                         <p>${book.ano}</p>
+
+                   </div>
+                   
+                    <div class="pull-left">
+	                    <a href=servletDetalhaLivro?id=<c:out value="${idval}"/>>
+	                    <img id="buscado" src="multicolor-4/images/books/${book.arquivo}" alt=""></a>
+                    </div> 
+               </div>
+              </c:forEach>
+              </c:if>
+         </div>
+     </div>
+   <!-- <div class="blog-pagination">
+        <ul class="pagination">
+          <li><a href="#">left</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li class="active"><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#">9</a></li>
+          <li><a href="#">right</a></li>
+        </ul>
+    </div>-->
+</form>

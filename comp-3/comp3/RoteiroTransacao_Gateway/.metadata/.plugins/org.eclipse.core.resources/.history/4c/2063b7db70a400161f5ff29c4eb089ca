@@ -1,0 +1,75 @@
+package controladores.contrato;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import dao.AmbienteDAO;
+import dao.ContratoDAO;
+import dao.MobiliaDAO;
+import entidades.Ambiente;
+import entidades.Comodo;
+import entidades.Contrato;
+import ts.contrato.CancelarContrato_TS;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+
+@WebServlet("/FinalizarContrato")
+public class FinalizarContrato_SL extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+	private CancelarContrato_TS cancelar;
+    
+    public FinalizarContrato_SL() {
+    	cancelar = new CancelarContrato_TS();
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		float comissao = Float.parseFloat(request.getParameter("comissao"));
+		String m = request.getParameter("method"); 
+
+		try {
+			if(m.equals("cancel")){
+				try {
+					cancelar.execute();
+					ContratoDAO.cancelContrato();
+					getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);	
+
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}else{
+				List<Ambiente> ambientes = AmbienteDAO.selectAmbiente();
+				float valor = Contrato.valorContrato(ambientes, comissao);
+				int prazo = Contrato.prazo(ambientes);
+				Contrato c = new Contrato(comissao, valor, prazo);
+				ContratoDAO.updateContrato(c);
+				request.setAttribute("ambientes", ambientes);
+				request.setAttribute("contrato",c );
+			}	
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		getServletContext().getRequestDispatcher("/FinalizarContrato.jsp").forward(request, response);	}
+}
+

@@ -1,0 +1,41 @@
+package entidades;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import mapper.MobiliaMAPPER;
+
+public class Sala extends Comodo {
+
+	private String id;
+	
+	public Sala (String id, String d, String tipo){
+		setDescricao(d);
+		setId(id);
+		setTipo(tipo);
+	}
+
+	public Sala(String d, String tipo){
+		setDescricao(d);
+		setTipo(tipo);
+	}
+	
+	@Override
+	public List<Mobilia> listaMobiliaDisponivel(List <String> set) {
+		List<Mobilia> array = new ArrayList<>();
+			try {
+				for(Mobilia m: MobiliaMAPPER.listMobiliaComodo(getId())){
+					if(!set.contains(m.getId())){
+						array.add(m);
+					}
+				}	
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			return array;
+		
+		}
+}

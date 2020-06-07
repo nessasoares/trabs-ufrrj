@@ -1,0 +1,73 @@
+package tm;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import entidades.Comodo;
+import entidades.ComodoComposto;
+
+public class Comodo_TM {
+	
+	public   void criarComodo(String desc, String tipo){
+		try {
+			Comodo.insereComodo(desc, tipo);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public    void criarComodoComposto(String desc, ArrayList<String> comodos){
+		try {
+			ComodoComposto.insertComodoComposto(desc, comodos);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public   void alterarComodo(String id, String desc){
+		try {
+			Comodo.alterComodo(id, desc);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
+	
+	public   void associarComodo(ArrayList<String> comodos){
+		
+		try {
+			Comodo.associarComodo(comodos);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
+	public   void DeletarComodo(String id){
+		try {
+			Comodo.deleteComodo(id);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public List<Comodo> ListarComodo(){
+		List<Comodo> l = null ; 
+		try {
+			l = Comodo.listaComodo();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return l;
+	}
+
+}

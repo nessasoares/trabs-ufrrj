@@ -1,0 +1,11 @@
+package entidades;
+
+import java.util.List;
+
+public class Comodo {
+	private String descricao;
+	
+/*	public List<Mobilia> listaMobiliaDisponivel(){
+		
+	}*/
+}

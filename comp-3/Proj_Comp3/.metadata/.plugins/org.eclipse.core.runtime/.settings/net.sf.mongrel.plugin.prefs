@@ -1,0 +1,7 @@
+computeSourcePath=true
+contextsDir=/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/apache-tomcat-7.0.70/conf/Catalina/localhost
+eclipse.preferences.version=1
+fixTomcatHomeBug=fixed
+tomcatConfigFile=/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/apache-tomcat-7.0.70/conf/server.xml
+tomcatDir=/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/apache-tomcat-7.0.70
+tomcatVersion=tomcatV7

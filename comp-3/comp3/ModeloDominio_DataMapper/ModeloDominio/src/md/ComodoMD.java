@@ -1,0 +1,129 @@
+package md;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
+import mapper.ComodoMAPPER;
+
+public abstract class ComodoMD {
+
+	private String id;
+	private String descricao;
+	private String tipo;
+	/*public Comodo(String id, String d){
+		setDescricao(d);
+		setId(id);
+	}
+	*/
+	
+	abstract public List<MobiliaMD> listaMobiliaDisponivel(List <String> set);
+	
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	
+	public static void criar(String desc, String tipo){
+		ComodoMD c = null;
+		try {
+			switch(tipo){
+			case "Quarto":
+					c = new QuartoMD("", desc, tipo);
+					break;
+			case "Sala":
+				c = new SalaMD("", desc, tipo);
+				break;
+			case "Cozinha":
+				c = new CozinhaMD("", desc, tipo);
+				break; 
+			case "ComodoComposto":
+				c = new ComodoCompostoMD("", desc, tipo);
+				break;
+			}
+			ComodoMAPPER.insereComodo(c);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static void associar(ArrayList<String> comodos){
+		
+		try {
+			ComodoMAPPER.associarComodo(comodos);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
+	public static void delete(String id){
+		try {
+			ComodoMAPPER.deleteComodo(id);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static List<ComodoMD>  listar(){
+		List<ComodoMD> l = null ; 
+		try {
+			l = ComodoMAPPER.listaComodo();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return l;
+	}
+	
+	public static void alterar(String id, String desc, String tipo){
+		ComodoMD c = null;
+		try {
+			switch(tipo){
+			case "Quarto":
+					c = new QuartoMD(id, desc, tipo);
+					break;
+			case "Sala":
+				c = new SalaMD(id, desc, tipo);
+				break;
+			case "Cozinha":
+				c = new CozinhaMD(id, desc, tipo);
+				break;
+			case "ComodoComposto":
+				c = new ComodoCompostoMD(id, desc, tipo);
+				break;
+			}
+			ComodoMAPPER.alterComodo(c);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+		
+		
+
+		}
+	
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	
+}

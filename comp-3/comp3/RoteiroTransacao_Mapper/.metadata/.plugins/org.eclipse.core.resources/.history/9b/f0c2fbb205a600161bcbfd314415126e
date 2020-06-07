@@ -1,0 +1,19 @@
+package ts.contrato;
+
+import java.sql.SQLException;
+
+import mapper.ComodoDAO;
+import mapper.ContratoDAO;
+
+public class CancelarContrato_TS {
+
+	public void execute(){
+			try {
+				ContratoDAO.cancelContrato();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	}
+	
+}

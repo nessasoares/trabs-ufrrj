@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Cadastro Usuario| WS book's</title>
+
+  <%= stylesheet_link_tag "bootstrap.min", "font-awesome.min", "animate.min", "lightbox", "main", "responsive", "sweetalert", "star-rating"%>
+  <%= javascript_include_tag "html5shiv", "respond", "jquery", "bootstrap.min", "lightbox.min", "wow.min", "main", "sweetalert.min", "jsFunctions", "star-rating" %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" %>
+
+  <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" %>
+
+
+  <!--[if lt IE 9]>
+</head><!--/head-->
+  <style type="text/css">
+
+    #labelImg{
+      margin-top:2%;
+    }
+  </style>
+<body>
+<header id="header">
+
+
+  <div class="navbar navbar-inverse" role="banner">
+    <div class="container">
+
+
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand">
+          <h1><%= link_to image_tag("logo.png"), homeUser_path %></h1>
+
+        </a>
+
+
+
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"> <li><%= link_to "Home", homeUser_path %></li></li>
+          <li class="dropdown"><a href="">Livros <i class="fa fa-angle-down"></i></a>
+          <ul role="menu" class="sub-menu">
+            <li><%= link_to "Buscar", sessions_search_path %></li>
+            <li><%= link_to "Inserir", new_livro_path %></li>
+          </ul>
+          </li>
+
+          <li ><a href=""><%=current_user.username %><i class="fa fa-angle-down"></i></a>
+            <ul role="menu" class="sub-menu">
+              <li><%= link_to "Profile", current_user, method: :get %></li>
+              <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+      <!--
+      LUPA DE PESQUISA
+///////////////////////////////////////////////////////////////////////////////////////////////
+      <div class="search">
+           <form role="form">
+               <i class="fa fa-search"></i>
+               <div class="field-toggle">
+                   <input type="text" class="search-form" autocomplete="on" placeholder="Search">
+               </div>
+           </form>
+       </div>
+       ///////////////////////////////////////////////////////////////////////////////////////////////
+-->
+    </div>
+  </div>
+
+  </div>
+  </div>
+</header>
+<!--/#header-->
+
+
+<section id="page-breadcrumb">
+  <div class="vertical-center sun">
+    <div class="container">
+      <div class="row">
+        <div class="action">
+          <div class="col-sm-12">
+            <h1 class="title">Últimas Atualizações</h1>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="container">
+    <div class="row">
+      <div id="team-carousel" class="carousel slide wow fadeIn" data-ride="carousel" data-wow-duration="400ms" data-wow-delay="400ms">
+        <!-- Indicators -->
+        <ol class="carousel-indicators visible-xs">
+          <li data-target="#team-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#team-carousel" data-slide-to="1"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+
+        <div class="carousel-inner">
+          <div class="item active">
+            <!--     <div class="col-sm-3 col-xs-6">
+                     <div class="team-single-wrapper">
+                         <div class="team-single">
+                             <div class="person-thumb">
+                                 <img src="multicolor-4/images/books/resize/harry4.jpg" class="img-responsive" alt="">
+                             </div>
+                             <div class="social-profile">
+                                 <ul class="nav nav-pills">
+                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                 </ul>
+                             </div>
+                         </div>
+                         <div class="person-info">
+                             <h2>Harry Potter e o Cálice de Fogo</h2>
+                             <p>J.K. Rowling</p>
+                         </div>
+                     </div>
+                 </div>  -->
+            <% @livros1.each do |livro| %>
+
+              <div class="col-sm-3 col-xs-6 wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+                <div class="team-single-wrapper">
+                  <div class="team-single">
+                    <div class="person-thumb">
+                      <%=link_to image_tag(livro.image.url(:medium), class:  "img-responsive"), livro%>
+                    </div>
+                     </div>
+                  <div class="portfolio-info">
+                    <h2><%= link_to livro.titulo, livro %></h2>
+                    <p><%= livro.autor %></p>                  </div>
+                </div>
+              </div>
+
+
+
+              <% end %>
+          </div>
+
+
+
+
+
+        <!-- Controls -->
+        <a class="left team-carousel-control hidden-xs" href="#team-carousel" data-slide="prev">left</a>
+        <a class="right team-carousel-control hidden-xs" href="#team-carousel" data-slide="next">right</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--/#home-slider-->
+
+
+<!--/#services-->
+
+<!--/#action-->
+
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center bottom-separator">
+        <%= image_tag "images/home/under.png", class:"img-responsive inline"%>
+      </div>
+
+
+      <table>
+        <thead>
+        <tr><h2 class="page-header">Frases</h2></tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><blockquote>
+            <p>Quem lê muito e anda muito, vai longe e sabe muito.</p>
+            <footer><cite title="Source Title">Cervantes, Miguel</cite></footer>
+          </blockquote></td>
+          <td><blockquote>
+            <p>Dupla delícia</p>
+            <p>O livro traz a vantagem de a gente poder estar só e ao mesmo tempo acompanhado.</p>
+            <footer><cite title="Source Title">Quintana, Mario</cite></footer>
+          </blockquote>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+
+      <div class="col-sm-12">
+        <div class="copyright-text text-center">
+          <p>&copy; Your Company 2014. All Rights Reserved.</p>
+          <p>Designed by <a target="_blank" href="http://www.themeum.com">Themeum</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--/#footer-->
+
+</body>
+</html>

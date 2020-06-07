@@ -1,0 +1,6 @@
+INDEX VERSION 1.3+/home/vanessasoares/Dropbox/trab_comp3/RoteiroTransacao_ActiveRecord/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2745293421.index
+1953839865.index
+4146226002.index
+1135969067.index
+3854640319.index

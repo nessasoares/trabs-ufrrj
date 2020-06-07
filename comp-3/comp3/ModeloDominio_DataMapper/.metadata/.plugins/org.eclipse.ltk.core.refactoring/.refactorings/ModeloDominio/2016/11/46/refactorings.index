@@ -1,0 +1,38 @@
+1478481053716	Delete element
+1478481075372	Copy compilation unit
+1478481084897	Copy compilation unit
+1478481094182	Copy compilation unit
+1478481105088	Copy compilation unit
+1478481125059	Copy compilation unit
+1478481266964	Delete element
+1478481468251	Delete elements
+1478481476583	Copy compilation units
+1478481493615	Rename type 'Ambiente'
+1478481504908	Rename type 'Comodo'
+1478481523183	Rename type 'ComodoComposto'
+1478481530277	Rename type 'Contrato'
+1478481540078	Rename type 'Cozinha'
+1478481547671	Rename type 'ItemVenda'
+1478481561755	Rename type 'Mobilia'
+1478481570414	Rename type 'Quarto'
+1478481578697	Rename type 'Sala'
+1478481875458	Delete element
+1478482132497	Delete element
+1478482250002	Delete element
+1478482291862	Delete element
+1478482401643	Delete element
+1478482415870	Delete element
+1478486958288	Delete element
+1478561193063	Rename package 'controladores.ambiente'
+1478561211806	Rename package 'controladores.comodo'
+1478561222670	Rename package 'controladores.contrato'
+1478561238171	Rename package 'controladores.mobilia'
+1478662623153	Rename package 'dao'
+1478662639841	Rename type 'AmbienteDAO'
+1478662657149	Rename type 'ComodoCompostoDAO'
+1478662666323	Rename type 'ComodoDAO'
+1478662676302	Rename type 'ContratoDAO'
+1478662696149	Rename type 'DAO'
+1478662705917	Rename type 'ItemVendaDAO'
+1478662714115	Rename type 'MobiliaDAO'
+1478663159778	Encapsulate field 'tipo'

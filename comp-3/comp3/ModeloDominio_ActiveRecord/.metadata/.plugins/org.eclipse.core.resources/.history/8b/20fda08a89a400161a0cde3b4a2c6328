@@ -1,0 +1,21 @@
+package ts.comodo;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import dao.ComodoDAO;
+
+public class AssociarComodo_TS {
+
+	public void execute(ArrayList<String> comodos){
+		
+		try {
+			ComodoDAO.associarComodo(comodos);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
+}

@@ -1,0 +1,14 @@
+package entidades;
+
+public class Contrato {
+	
+	private float comissao;
+	
+	/*public float valorContrato(){
+		
+	}
+	
+	public int prazo(){
+		
+	}*/
+}

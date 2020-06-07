@@ -1,0 +1,8 @@
+package ts.comodo;
+
+public class CriarComodo_TS {
+
+	public void execute(){
+		
+	}
+}

@@ -1,0 +1,53 @@
+package servicelayer.contrato;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import activeRecord.AmbienteDAO;
+import activeRecord.ComodoDAO;
+import activeRecord.ContratoDAO;
+import activeRecord.ItemVendaDAO;
+import activeRecord.MobiliaDAO;
+import md.ContratoMD;
+import md.MobiliaMD;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+
+@WebServlet("/CriarContrato")
+public class CriarContrato_SL extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+
+    public CriarContrato_SL() {
+    	super();
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		ContratoMD c = new ContratoMD();
+		c.criar();
+    	getServletContext().getRequestDispatcher("/CriarAmbiente").forward(request, response);
+	}
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		getServletContext().getRequestDispatcher("/CrListarContrato").forward(request, response);
+	}
+	
+	public List<MobiliaMD> listaMobiliaComodo(String id){
+		List<MobiliaMD> l = MobiliaMD.listarMobiliaComodo(id);
+		return l;
+	}
+	
+}
+

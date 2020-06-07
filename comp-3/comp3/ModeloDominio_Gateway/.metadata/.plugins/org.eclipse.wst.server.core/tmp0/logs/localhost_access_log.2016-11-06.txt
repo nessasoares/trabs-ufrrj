@@ -1,0 +1,11 @@
+127.0.0.1 - - [06/Nov/2016:23:01:22 -0200] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [06/Nov/2016:23:01:33 -0200] "GET /Proj_Comp3/ HTTP/1.1" 200 3045
+127.0.0.1 - - [06/Nov/2016:23:01:33 -0200] "GET /Proj_Comp3/bootstrap/cosmo_booststrap.css HTTP/1.1" 404 1076
+127.0.0.1 - - [06/Nov/2016:23:01:33 -0200] "GET /Proj_Comp3/js/jquery-latest.min.js HTTP/1.1" 200 95786
+127.0.0.1 - - [06/Nov/2016:23:01:33 -0200] "GET /Proj_Comp3/bootstrap/bootstrap.min.css HTTP/1.1" 200 124529
+127.0.0.1 - - [06/Nov/2016:23:01:33 -0200] "GET /Proj_Comp3/img/decor.jpg HTTP/1.1" 200 169963
+127.0.0.1 - - [06/Nov/2016:23:01:34 -0200] "GET /favicon.ico HTTP/1.1" 404 1016
+127.0.0.1 - - [06/Nov/2016:23:01:37 -0200] "GET /Proj_Comp3/CriarComodo HTTP/1.1" 200 7373
+127.0.0.1 - - [06/Nov/2016:23:01:37 -0200] "GET /Proj_Comp3/bootstrap/cosmo_booststrap.css HTTP/1.1" 404 1076
+127.0.0.1 - - [06/Nov/2016:23:01:39 -0200] "GET /Proj_Comp3/index.jsp HTTP/1.1" 200 3045
+127.0.0.1 - - [06/Nov/2016:23:01:39 -0200] "GET /Proj_Comp3/bootstrap/cosmo_booststrap.css HTTP/1.1" 404 1076

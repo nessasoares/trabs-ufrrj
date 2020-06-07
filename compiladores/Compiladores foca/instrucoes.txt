@@ -1,0 +1,27 @@
+    int a = 1;
+    int b = 2;
+    int c = a * b;
+    10 < 9;
+    char k = 'a';
+    int w = a + k;
+    
+     int a = 3 + 4 * 5;
+    int k = a < 9;
+    int b = a == 10;
+    
+    int a;
+    switch(a){
+        case a :
+            1 + 1;
+    }
+    
+    int main()
+{
+    int a;
+    switch(a){
+        case 1:
+            1+1;
+        default:
+            1+1;
+    }
+}

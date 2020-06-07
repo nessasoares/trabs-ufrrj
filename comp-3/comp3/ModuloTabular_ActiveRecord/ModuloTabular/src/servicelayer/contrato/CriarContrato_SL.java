@@ -1,0 +1,49 @@
+package servicelayer.contrato;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import entidades.Contrato;
+import entidades.Comodo;
+import entidades.Mobilia;
+import tm.*;
+import entidades.Contrato;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+
+@WebServlet("/CriarContrato")
+public class CriarContrato_SL extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+	private Mobilia_TM mobilia;
+	private Contrato_TM contrato;
+
+    public CriarContrato_SL() {
+    	contrato = new Contrato_TM();
+    	mobilia = new Mobilia_TM();
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		contrato.CriarContrato();
+    	getServletContext().getRequestDispatcher("/CriarAmbiente").forward(request, response);
+	}
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		getServletContext().getRequestDispatcher("/CrListarContrato").forward(request, response);
+	}
+
+	
+}
+

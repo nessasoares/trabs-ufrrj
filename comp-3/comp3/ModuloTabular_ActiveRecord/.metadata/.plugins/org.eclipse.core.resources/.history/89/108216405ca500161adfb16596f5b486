@@ -1,0 +1,21 @@
+package tm;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import dao.ComodoDAO;
+import entidades.Comodo;
+
+public class ItemVenda_TM {
+	public List<Comodo>  ListarItemVenda(){
+		List<Comodo> l = null ; 
+		try {
+			l = ComodoDAO.listaComodo();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return l;
+	}
+
+}

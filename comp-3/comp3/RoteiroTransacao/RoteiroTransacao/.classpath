@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/annotations-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/catalina.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/catalina-ant.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/catalina-ha.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/catalina-storeconfig.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/catalina-tribes.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/ecj-4.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/el-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/jasper.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/jasper-el.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/servlet-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/tomcat-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/tomcat-coyote.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/tomcat-dbcp.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/tomcat-i18n-es.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/tomcat-i18n-fr.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/tomcat-i18n-ja.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/tomcat-jdbc.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/tomcat-jni.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/tomcat-util.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/tomcat-util-scan.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/tomcat-websocket.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Programs/apache-tomcat-8.0.37/lib/websocket-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/ant-antlr-1.6.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/antlr-2.7.5H3.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/asm.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/asm-attrs.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/cglib-2.1.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/commons-collections-2.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/commons-fileupload-1.2.1.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/commons-fileupload-1.2.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/commons-fileupload-1.2.1-sources.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/commons-io-1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/commons-io-1.4-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/commons-io-1.4-sources.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/commons-logging-1.0.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/dom4j-1.6.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/ehcache-1.1.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/hibernate3.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/hibernate-annotations-3.5.6-Final.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/java-json.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/javassist-3.12.0.GA (1).jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/javax.servlet-api-3.1.0.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/jsf-api.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/jsf-impl.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/jstl.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/jta.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/log4j-1.2.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/ojdbc14.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/postgresql-9.3-1100-jdbc41.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/servlet-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/standard.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/wloracle.jar"/>
+	<classpathentry kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/wlsqlserver.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/vanessasoares/Dropbox/UFRRJ/8/comp3/COMPIII/compIII/ws/Proj_Comp3/WebContent/WEB-INF/lib/tomcat-juli.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

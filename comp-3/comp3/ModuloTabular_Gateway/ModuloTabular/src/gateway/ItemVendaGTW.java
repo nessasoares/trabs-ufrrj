@@ -1,0 +1,50 @@
+package gateway;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+import entidades.ItemVenda;
+
+public class ItemVendaGTW extends Connectionbd{
+
+	
+	public static void insereItemVenda(ArrayList<ItemVenda> iv) throws SQLException{
+		
+		Connection conn = null;
+		 try
+	        {
+             conn = getConnection();
+
+	            	PreparedStatement stmt = conn.prepareStatement("INSERT INTO item_venda (id_ambiente, id_mobilia, quantidade) VALUES"+
+	            								"( (select id from ambiente order by id desc limit 1),?,?);");
+	            	 for(ItemVenda i: iv){
+	            		  stmt.setInt(1, i.getId());
+	            	      stmt.setInt(2, i.getQuantidade());
+		                  stmt.execute();
+	            	 }
+	            	   stmt.close();
+	            }
+	        
+	        catch(Exception e) 
+	        {
+	            e.printStackTrace();
+	        }
+		 	finally
+		 	{
+		 		conn.close();
+		 	}
+		
+	}
+	
+}

@@ -1,0 +1,21 @@
+1478571217851	Copy compilation unit
+1478571231305	Copy compilation unit
+1478571253419	Copy compilation unit
+1478571288169	Copy compilation unit
+1478572669851	Delete element
+1478573062525	Rename package 'controladores.ambiente'
+1478573072670	Rename package 'controladores.contrato'
+1478573084809	Rename package 'controladores.mobilia'
+1478573098450	Rename package 'controladores.comodo'
+1478575013634	Delete element
+1478605736492	Delete elements
+1478659891732	Rename package 'dao'
+1478659910786	Rename type 'AmbienteDAO'
+1478659929917	Rename type 'ComodoCompostoDAO'
+1478659941250	Rename type 'ComodoDAO'
+1478659949529	Rename type 'ContratoDAO'
+1478659965467	Rename type 'DAO'
+1478659976124	Rename type 'ItemVendaDAO'
+1478659985461	Rename type 'MobiliaDAO'
+1478660028240	Rename type 'ConnectionDB'
+1478660158841	Encapsulate field 'tipo'

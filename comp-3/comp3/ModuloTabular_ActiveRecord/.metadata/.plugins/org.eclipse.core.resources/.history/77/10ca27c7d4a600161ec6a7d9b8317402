@@ -1,0 +1,53 @@
+package entidades;
+
+public class Mobilia {
+	
+	private String id;
+	private String descricao;
+	private float custo;
+	private int tempoEntrega;
+	
+	public Mobilia(String id, String d, float c, int t){
+		this.setId(id);
+		setDescricao(d);
+		setCusto(c);
+		setTempoEntrega(t);
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public float getCusto() {
+		return custo;
+	}
+
+	public void setCusto(float custo) {
+		this.custo = custo;
+	}
+
+	public int getTempoEntrega() {
+		return tempoEntrega;
+	}
+
+	public void setTempoEntrega(int tempoEntrega) {
+		this.tempoEntrega = tempoEntrega;
+	}
+	
+	//----------------------------------------------------------------
+	//						sql
+	//------------------------------------------------------------------
+	
+}

@@ -1,0 +1,12 @@
+package controladores.comodo;
+
+public class AlterarComodo_TS {
+
+	public void executeGet(){
+		
+	}
+	
+	public void executePost(){
+		
+	}
+}

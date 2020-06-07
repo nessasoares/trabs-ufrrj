@@ -1,0 +1,25 @@
+﻿alter table "mobilia" add column tempoEntrega integer
+
+select * from "mobilia"
+
+update "mobilia" set descricao='vava', custo=9.8, tempoentrega=1000
+where id = 3
+
+delete from "comodo" where id is not null
+
+select * from "comodo_composto"
+
+select * from "comodo"
+ALTER TABLE "comodo_composto" add column id serial
+
+
+select c.id from "comodo" as c where descricao = 'oi'
+
+INSERT INTO comodo_composto (id_comodo, comodo_1, comodo_2) VALUES ((select c.id from "comodo" as c where descricao = 'oi'),
+1, 2);
+
+
+	            			INSERT INTO comodo_composto (id_comodo, comodo_1, comodo_2)
+	            			VALUES ((select c.id from comodo as c where descricao = 'oi'),
+	            			(select c.id from tipo_comodo as c where tipo = 'quarto'),
+	            			(select c.id from tipo_comodo as c where tipo = 'cozinha'));

@@ -1,0 +1,61 @@
+
+<style type="text/css">
+  #buscado {
+    margin-left: 4%;
+  }
+</style>
+
+
+<%= search_form_for @q, url: sessions_search_path, html: { method: :post } do |f| %>
+
+    <div class="form-group">
+      <%= f.label :Autor%>
+      <%= f.search_field :autor_cont%>
+
+
+      <%=f.submit "Buscar", class: "btn btn-default" %>
+<% end %>
+
+</div>
+
+<br>
+<% @livros.each do |livro| %>
+
+    <div class="sidebar blog-sidebar">
+      <div class="sidebar-item  recent">
+
+
+        <div class="media"   ">
+
+        <div class="media-body" id="buscado">
+          <h4><a><%= link_to livro.titulo, livro %></a></h4>
+          <p><%= livro.autor %></p>
+          <p><%= livro.editora %></p>
+
+        </div>
+
+        <div class="pull-left">
+          <a> <%= link_to image_tag(livro.image.url(:thumb), height: '150', width: '100'), livro %></a>
+
+        </div>
+      </div>
+
+    </div>
+    </div>
+<% end %>
+<!-- <div class="blog-pagination">
+     <ul class="pagination">
+       <li><a href="#">left</a></li>
+       <li><a href="#">1</a></li>
+       <li><a href="#">2</a></li>
+       <li class="active"><a href="#">3</a></li>
+       <li><a href="#">4</a></li>
+       <li><a href="#">5</a></li>
+       <li><a href="#">6</a></li>
+       <li><a href="#">7</a></li>
+       <li><a href="#">8</a></li>
+       <li><a href="#">9</a></li>
+       <li><a href="#">right</a></li>
+     </ul>
+ </div>-->
+</form>

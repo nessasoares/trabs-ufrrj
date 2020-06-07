@@ -1,0 +1,78 @@
+1478447850209	Rename type 'CrAlterarComodo'
+1478447862752	Rename type 'CrCriarComodo'
+1478447887362	Rename type 'CrListarComodo'
+1478447898436	Delete element
+1478448211511	Copy compilation units
+1478448516981	Delete elements
+1478452288050	Move compilation units
+1478452315925	Copy package
+1478452322754	Delete element
+1478452337141	Copy package
+1478452346944	Delete element
+1478452355306	Rename package 'comodo'
+1478452509466	Copy compilation unit
+1478454394231	Copy compilation unit
+1478465385466	Rename type 'CrAlterarAmbiente'
+1478465397733	Rename type 'CrCriarAmbiente'
+1478465407373	Rename type 'CrListarAmbiente'
+1478465424735	Copy package
+1478465474196	Rename type 'AlterarComodo_TS'
+1478465484658	Rename type 'CriarComodo_TS'
+1478465489018	Delete element
+1478465501255	Rename type 'DeletarComodo_TS'
+1478465509689	Rename type 'ListarComodo_TS'
+1478465722245	Copy package
+1478465746868	Rename type 'AlterarAmbiente_TS'
+1478465755330	Rename type 'CriarAmbiente_TS'
+1478465774841	Rename type 'DeletarAmbiente_TS'
+1478465788739	Rename type 'ListarAmbiente_TS'
+1478468617004	Delete element
+1478468657173	Copy package
+1478468679059	Delete element
+1478468694584	Copy package
+1478468707396	Rename type 'AlterarComodo_TS'
+1478468718755	Rename type 'CriarComodo_TS'
+1478468721423	Delete element
+1478468737172	Rename type 'DeletarComodo_TS'
+1478468746936	Rename type 'ListarComodo_TS'
+1478469092748	Copy compilation unit
+1478469666383	Rename type 'CrAlterarMobilia'
+1478469676894	Rename type 'CrCriarMobilia'
+1478469686864	Rename type 'CrListarMobilia'
+1478469698108	Rename type 'CrCriarContrato'
+1478469706849	Rename type 'CrFinalizarContrato'
+1478469716181	Rename type 'CrListarContrato'
+1478469726737	Rename type 'CrListarAmbientesContrato'
+1478469946990	Copy compilation unit
+1478470077585	Delete element
+1478470696408	Copy package
+1478470714583	Rename type 'CriarAmbiente_TS'
+1478470723793	Rename type 'DeletarAmbiente_TS'
+1478470733486	Rename type 'ListarAmbiente_TS'
+1478470756101	Rename type 'DeletarContrato_TS'
+1478471525161	Delete element
+1478471542823	Copy compilation unit
+1478471670276	Copy compilation unit
+1478472204586	Delete element
+1478474163655	Copy compilation unit
+1478474175095	Delete element
+1478474190912	Copy compilation unit
+1478606667073	Rename package 'controladores.ambiente'
+1478606676353	Rename package 'controladores.comodo'
+1478606684678	Rename package 'controladores.contrato'
+1478606693559	Rename package 'controladores.mobilia'
+1478645358260	Rename package 'dao'
+1478645383598	Rename type 'AmbienteDAO'
+1478645401026	Rename type 'ComodoCompostoDAO'
+1478645409439	Rename type 'ComodoDAO'
+1478645421408	Rename type 'ContratoDAO'
+1478645428038	Rename type 'CozinhaDAO'
+1478645485694	Rename type 'DAO'
+1478645494503	Rename type 'ItemVendaDAO'
+1478645504829	Rename type 'MobiliaDAO'
+1478645513495	Rename type 'QuartoDAO'
+1478645521862	Rename type 'SalaDAO'
+1478645534281	Delete element
+1478646388862	Delete element
+1478646394360	Delete elements
+1478646655168	Encapsulate field 'tipo'

@@ -1,0 +1,12 @@
+package ambiente;
+
+public class CriarComodo_TS {
+
+	public void executeGet(){
+		
+	}
+	
+	public void executePost(){
+		
+	}
+}

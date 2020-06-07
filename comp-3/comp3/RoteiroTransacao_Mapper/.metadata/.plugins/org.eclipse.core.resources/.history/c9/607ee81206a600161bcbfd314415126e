@@ -1,0 +1,188 @@
+package mapper;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+import entidades.Cozinha;
+import jdbc.PostgreSQLJDBC;
+
+public class CozinhaMAPPER {
+
+	
+	public static void insereCozinha(String desc) throws SQLException{
+		
+		Connection conn = null;
+		 try
+	        {
+	            Context ctx = new InitialContext();
+	            if(ctx == null )
+	                throw new Exception("Boom - No Context");
+	            DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/postgres");
+	            if (ds != null) 
+	            {
+	                conn = ds.getConnection();
+	            	PreparedStatement stmt = conn.prepareStatement("INSERT INTO cozinha (descricao) "
+	            			+ "VALUES (?);");
+	            	stmt.setString(1, desc);
+                    stmt.execute();
+                    stmt.close();
+	                
+                   // if(rst.next())
+	            }
+	        }
+	        catch(Exception e) 
+	        {
+	            e.printStackTrace();
+	        }
+		 	finally
+		 	{
+		 		conn.close();
+		 	}
+		
+	}
+	
+	public static List<Cozinha> listaCozinha() throws SQLException{
+		Connection conn = null;
+		Statement stmt = null;
+		String sql = "select * from cozinha;";
+		List<Cozinha> l = new ArrayList<Cozinha>();
+		 try
+	        {
+	            Context ctx = new InitialContext();
+	            if(ctx == null )
+	                throw new Exception("Boom - No Context");
+	            DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/postgres");
+	            if (ds != null) 
+	            {
+	                conn = ds.getConnection();
+	            	stmt = conn.createStatement();
+	            	ResultSet rs = stmt.executeQuery(sql);
+	            	while(rs.next()){
+	            		String id = rs.getString("id");
+	            		String d = rs.getString("descricao");
+	            		Cozinha c = new Cozinha(id, d);
+	            		l.add(c);
+	            	}
+	            }
+	        }
+	        catch(Exception e) 
+	        {
+	            e.printStackTrace();
+	        }
+		 	finally
+		 	{
+		 		conn.close();
+		 	}
+		return l;
+		
+	}
+	
+public static void deleteCozinha(String id) throws SQLException{
+		int int_id = Integer.parseInt(id);
+		Connection conn = null;
+		 try
+	        {
+	            Context ctx = new InitialContext();
+	            if(ctx == null )
+	                throw new Exception("Boom - No Context");
+	            DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/postgres");
+	            if (ds != null) 
+	            {
+	                conn = ds.getConnection();
+	            	PreparedStatement stmt = conn.prepareStatement("delete from cozinha where id = ?;");
+	            	stmt.setInt(1, int_id);
+                    stmt.execute();
+                    stmt.close();
+	                
+                   // if(rst.next())
+	            }
+	        }
+	        catch(Exception e) 
+	        {
+	            e.printStackTrace();
+	        }
+		 	finally
+		 	{
+		 		conn.close();
+		 	}
+		
+	}
+
+public static Cozinha searchCozinha(String s_id) throws SQLException{
+	Connection conn = null;
+	Statement stmt = null;
+	Cozinha c = null;
+	String sql = "select descricao from cozinha where id = '"+s_id +"';";
+	 try
+        {
+            Context ctx = new InitialContext();
+            if(ctx == null )
+                throw new Exception("Boom - No Context");
+            DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/postgres");
+            if (ds != null) 
+            {
+                conn = ds.getConnection();
+            	stmt = conn.createStatement();
+            	ResultSet rs = stmt.executeQuery(sql);
+           		String id = rs.getString("id");
+           		String d = rs.getString("descricao");
+           		c = new Cozinha(id, d);
+            }
+        }
+        catch(Exception e) 
+        {
+            e.printStackTrace();
+        }
+	 	finally
+	 	{
+	 		conn.close();
+	 	}
+	return c;
+	
+}
+
+
+public static void alterCozinha(String id, String new_desc) throws SQLException{
+	int int_id = Integer.parseInt(id);
+	Connection conn = null;
+	 try
+        {
+            Context ctx = new InitialContext();
+            if(ctx == null )
+                throw new Exception("Boom - No Context");
+            DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/postgres");
+            if (ds != null) 
+            {
+                conn = ds.getConnection();
+            	PreparedStatement stmt = conn.prepareStatement("UPDATE cozinha SET descricao=? "+
+										            			"WHERE id=?;");
+            	stmt.setString(1, new_desc);
+            	stmt.setInt(2, int_id);
+                stmt.execute();
+                stmt.close();
+                
+               // if(rst.next())
+            }
+        }
+        catch(Exception e) 
+        {
+            e.printStackTrace();
+        }
+	 	finally
+	 	{
+	 		conn.close();
+	 	}
+	
+}
+	
+}

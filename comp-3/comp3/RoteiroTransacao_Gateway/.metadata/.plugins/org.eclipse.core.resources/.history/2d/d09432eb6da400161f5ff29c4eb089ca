@@ -1,0 +1,16 @@
+package ts.mobilia;
+
+import java.sql.SQLException;
+
+import dao.ComodoDAO;
+import dao.MobiliaDAO;
+
+public class AlterarMobilia_TS {
+
+	public void execute(String id, String desc, String desc){
+		Mobilia m = new Mobilia(id, desc, custo, tempoEntrega);
+		MobiliaDAO.alterMobilia(m, comodos);
+
+	}
+	
+}

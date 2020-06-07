@@ -1,0 +1,146 @@
+package entidades;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.*;
+
+import dao.DAO;
+
+public class Contrato extends DAO{
+	
+	private float comissao;
+	private float valor;
+	private int prazo;
+	
+	public Contrato(float comissao, float valor, int prazo){
+		setComissao(comissao);
+		setValor(valor);
+		setPrazo(prazo);
+	}
+	
+	public float getComissao() {
+		return comissao;
+	}
+
+	public void setComissao(float comissao) {
+		this.comissao = comissao;
+	}
+	
+	public static float valorContrato(List<Ambiente> ambiente, float comissao){
+		float soma_ambientes = 0, total;
+		for(Ambiente a: ambiente){
+			soma_ambientes = soma_ambientes + a.getCusto();
+		}
+		total = soma_ambientes * (1+comissao);
+		return total;
+	}
+	
+	public static int prazo(List<Ambiente> ambiente){
+		int total = 0;
+		for(Ambiente a: ambiente){
+			total = total + a.getTempo();
+		}
+		return total;
+		
+	}
+
+	public float getValor() {
+		return valor;
+	}
+
+	public void setValor(float valor) {
+		this.valor = valor;
+	}
+
+	public int getPrazo() {
+		return prazo;
+	}
+
+	public void setPrazo(int prazo) {
+		this.prazo = prazo;
+	}
+	
+	//----------------------------------------------------------------
+	//						sql
+	//------------------------------------------------------------------
+	
+	
+	public static void criaContrato() throws SQLException{
+		
+		Connection conn = null;
+		 try
+	        {
+             conn = getConnection();
+
+	            	PreparedStatement stmt = conn.prepareStatement("INSERT INTO contrato (prazo) values (0);");
+		            stmt.execute();
+	            	stmt.close();
+	            }
+	        
+	        catch(Exception e) 
+	        {
+	            e.printStackTrace();
+	        }
+		 	finally
+		 	{
+		 		conn.close();
+		 	}
+		
+	}
+	
+	public static void updateContrato(Contrato c) throws SQLException{
+		Connection conn = null;
+		 try
+	        {
+             conn = getConnection();
+
+	            	PreparedStatement stmt = conn.prepareStatement("UPDATE contrato SET comissao=?,"
+	            													+ "prazo=?, valor=? "+
+											            			"WHERE id=(select id from contrato order by id desc limit 1);");
+	            	stmt.setFloat(1, c.getComissao());
+	            	stmt.setInt(2, c.getPrazo());
+	            	stmt.setFloat(3, c.getValor());
+	                stmt.execute();
+	                stmt.close();
+	                
+	               // if(rst.next())
+	            }
+	        
+	        catch(Exception e) 
+	        {
+	            e.printStackTrace();
+	        }
+		 	finally
+		 	{
+		 		conn.close();
+		 	}
+		
+	}
+	
+	
+	public static void cancelContrato() throws SQLException{
+		Connection conn = null;
+		 try
+	        {
+             conn = getConnection();
+
+	            	PreparedStatement stmt = conn.prepareStatement("DELETE FROM contrato where id=(SELECT MAX(id) FROM contrato);");
+	                stmt.execute();
+	                stmt.close();
+	                
+	               // if(rst.next())
+	            }
+	        catch(Exception e) 
+	        {
+	            e.printStackTrace();
+	        }
+		 	finally
+		 	{
+		 		conn.close();
+		 	}
+		
+	}
+	
+	
+}

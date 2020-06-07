@@ -1,0 +1,12 @@
+package ts.comodo;
+
+import dao.ComodoDAO;
+import entidades.Comodo;
+
+public class CriarComodo_TS {
+
+	public List<Comodo>  execute(){
+		List<Comodo> l = ComodoDAO.listaComodo();
+		
+	}
+}

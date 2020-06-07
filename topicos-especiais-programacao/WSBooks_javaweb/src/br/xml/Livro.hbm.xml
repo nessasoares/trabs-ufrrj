@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/10/2015 22:09:35 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="br.recomendacao.livros.Livro" table="Livro">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <property name="titulo" type="java.lang.String">
+            <column name="titulo" />
+        </property>
+        <property name="autor" type="java.lang.String">
+            <column name="autor" />
+        </property>
+        <property name="editora" type="java.lang.String">
+            <column name="editora" />
+        </property>
+        <property name="ano" type="java.lang.String">
+            <column name="ano" />
+        </property>
+        <property name="sinopse" type="java.lang.String">
+            <column name="sinopse" />
+        </property>
+        <property name="arquivo" type="java.lang.String">
+            <column name="arquivo" />
+        </property>
+         <property name="visita" type="int">
+            <column name="visita" />
+        </property>
+        
+         <property name="curtida" type="int">
+            <column name="curtida" />
+        </property>
+    </class>
+</hibernate-mapping>

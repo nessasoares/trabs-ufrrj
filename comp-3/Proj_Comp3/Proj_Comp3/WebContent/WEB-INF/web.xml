@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+
+  <welcome-file-list>
+  		<welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+   <servlet>
+   	<servlet-name>CriarCozinha</servlet-name>
+   	<servlet-class>controladores.CrCriarCozinha</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	<servlet-name>CriarCozinha</servlet-name>
+   	<url-pattern>/CriarCozinha</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+   	<servlet-name>CrListarCozinha</servlet-name>
+   	<servlet-class>controladores.CrListarCozinha</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	<servlet-name>CrListarCozinha</servlet-name>
+   	<url-pattern>/CrListarCozinha</url-pattern>
+   </servlet-mapping>
+   
+    <servlet>
+   	<servlet-name>AlterarCozinha</servlet-name>
+   	<servlet-class>controladores.CrAlterarCozinha</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	<servlet-name>AlterarCozinha</servlet-name>
+   	<url-pattern>/AlterarCozinha</url-pattern>
+   </servlet-mapping>
+   
+   
+    <servlet>
+   	<servlet-name>CriarQuarto</servlet-name>
+   	<servlet-class>controladores.quarto.CrCriarQuarto</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	<servlet-name>CriarQuarto</servlet-name>
+   	<url-pattern>/CriarQuarto</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+   	<servlet-name>CrListarQuarto</servlet-name>
+   	<servlet-class>controladores.quarto.CrListarQuarto</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	<servlet-name>CrListarQuarto</servlet-name>
+   	<url-pattern>/ListarQuarto</url-pattern>
+   </servlet-mapping>
+   
+    <servlet>
+   	<servlet-name>AlterarQuarto</servlet-name>
+   	<servlet-class>controladores.quarto.CrAlterarQuarto</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	<servlet-name>AlterarQuarto</servlet-name>
+   	<url-pattern>/AlterarQuarto</url-pattern>
+   </servlet-mapping>
+   
+   
+   <resource-ref>
+ <description>postgreSQL Datasource example</description>
+ <res-ref-name>jdbc/postgres</res-ref-name>
+ <res-type>javax.sql.DataSource</res-type>
+ <res-auth>Container</res-auth>
+</resource-ref>
+   
+</web-app>

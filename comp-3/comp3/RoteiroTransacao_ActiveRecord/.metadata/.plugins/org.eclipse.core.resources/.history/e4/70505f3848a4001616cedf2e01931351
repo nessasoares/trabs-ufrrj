@@ -1,0 +1,10 @@
+package ts.comodo;
+
+import entidades.Comodo;
+
+public class CriarComodo_TS {
+
+	public <Comodo>  execute(){
+		
+	}
+}

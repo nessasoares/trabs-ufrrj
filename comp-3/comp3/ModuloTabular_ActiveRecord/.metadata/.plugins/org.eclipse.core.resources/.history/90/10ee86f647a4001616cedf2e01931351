@@ -1,0 +1,12 @@
+package ts.comodo;
+
+public class CriarComodo_TS {
+
+	public void executeGet(){
+		
+	}
+	
+	public void executePost(){
+		
+	}
+}

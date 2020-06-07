@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="24" key="passwordStores.location.y"/>
+	<item value="24" key="CommitDialog.location.y"/>
+	<item value="426" key="passwordStores.location.x"/>
+	<item value="49" key="CommitDialog.location.x"/>
+	<item value="500" key="CommitDialog.weights.0"/>
+	<item value="500" key="CommitDialog.weights.1"/>
+	<item value="" key="DirectorySelectionPage.lastParent_https://svn.riouxsvn.com/testecomp3"/>
+	<item value="744" key="CommitDialog.size.y"/>
+	<item value="1317" key="CommitDialog.size.x"/>
+	<item value="170" key="HistoryTableProvider.SVNHistoryPage.Date"/>
+	<item value="136" key="HistoryTableProvider.SVNHistoryPage.Author"/>
+	<item value="613" key="passwordStores.size.y"/>
+	<item value="565" key="passwordStores.size.x"/>
+	<item value="68" key="HistoryTableProvider.SVNHistoryPage.Revision"/>
+	<item value="https://svn.riouxsvn.com/testecomp3" key="RepositorySelectionPage.lastRepository"/>
+	<item value="339" key="HistoryTableProvider.SVNHistoryPage.Comment"/>
+	<section name="CommitWizard">
+		<item value="500" key="VWeight2"/>
+		<item value="500" key="VWeight1"/>
+		<item value="false" key="ShowCompare"/>
+	</section>
+	<section name="SynchronizeResourceSelectionDialog">
+		<item value="" key="SynchronizeResourceSelectionDialog.STORE_WORKING_SETS"/>
+	</section>
+	<section name="NewLocationWizard">
+		<list key="ConfigurationWizardMainPage.STORE_URL_ID">
+			<item value="https://svn.riouxsvn.com/testecomp3"/>
+		</list>
+	</section>
+</section>

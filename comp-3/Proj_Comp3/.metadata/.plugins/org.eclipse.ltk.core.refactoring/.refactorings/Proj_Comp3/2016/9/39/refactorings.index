@@ -1,0 +1,33 @@
+1474195453422	Encapsulate field 'numParedes'
+1474195459831	Encapsulate field 'numPortas'
+1474195465448	Encapsulate field 'metragem'
+1474195603051	Encapsulate field 'descricao'
+1474195770047	Encapsulate field 'quantidade'
+1474195777698	Encapsulate field 'comissao'
+1474195844930	Copy file
+1474196247432	Delete elements
+1474209332789	Rename resource 'index.jsp'
+1474209350607	Copy file
+1474210995282	Copy compilation unit
+1474339464099	Copy compilation unit
+1474339512173	Move compilation unit
+1474339567859	Delete element
+1474339652296	Rename type 'CriarAmbienteServlet'
+1474339678676	Rename type 'CriarCozinhaServlet'
+1474339787680	Copy compilation unit
+1474339797783	Rename type 'CrCriarAmbienteServlet'
+1474339805008	Rename type 'CrCriarCozinhaServlet'
+1474339827149	Copy compilation unit
+1474339856351	Delete element
+1474339880943	Copy file
+1474339893222	Copy file
+1474339901837	Rename resource 'ListarCOzinha.jsp'
+1474342653271	Copy file
+1474342660668	Move 'index.jsp' to 'build'
+1474342667240	Move 'index.jsp' to 'WebContent'
+1474342686543	Copy file
+1474366704851	Copy file
+1474366712388	Copy file
+1474366727634	Copy file
+1474368598458	Copy file
+1474368719390	Rename resource 'header.jsp'

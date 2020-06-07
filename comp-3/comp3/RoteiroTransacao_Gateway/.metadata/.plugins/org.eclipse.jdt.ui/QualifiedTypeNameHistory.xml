@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="ts.ambiente.CriarAmbiente_TS"/>
+<fullyQualifiedTypeName name="ts.itemVenda.CriarItemVenda_TS"/>
+<fullyQualifiedTypeName name="entidades.Ambiente"/>
+<fullyQualifiedTypeName name="entidades.ItemVenda"/>
+<fullyQualifiedTypeName name="ts.ambiente.ListarAmbiente_TS"/>
+<fullyQualifiedTypeName name="ts.mobilia.CriarMobilia_TS"/>
+<fullyQualifiedTypeName name="ts.comodo.AssociarComodo_TS"/>
+<fullyQualifiedTypeName name="ts.comodo.ListarComodo_TS"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="ts.mobilia.AlterarMobilia_TS"/>
+<fullyQualifiedTypeName name="ts.mobilia.DeletarMobilia_TS"/>
+<fullyQualifiedTypeName name="entidades.Mobilia"/>
+<fullyQualifiedTypeName name="dao.MobiliaDAO"/>
+<fullyQualifiedTypeName name="controladores.mobilia.ListarMobilia_SL"/>
+<fullyQualifiedTypeName name="ts.mobilia.ListarMobilia_TS"/>
+<fullyQualifiedTypeName name="ts.contrato.CriarContrato_TS"/>
+<fullyQualifiedTypeName name="ts.contrato.CancelarContrato_TS"/>
+<fullyQualifiedTypeName name="antlr.collections.List"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="ts.contrato.UpdateContrato_TS"/>
+<fullyQualifiedTypeName name="ts.ambiente.GetAmbiente_TS"/>
+<fullyQualifiedTypeName name="ts.mobilia.ListarMobiliaComodo_TS"/>
+<fullyQualifiedTypeName name="gateway.ItemVendaGTW"/>
+<fullyQualifiedTypeName name="gateway.ContratoGTW"/>
+<fullyQualifiedTypeName name="gateway.ComodoCompostoGTW"/>
+<fullyQualifiedTypeName name="gateway.ComodoGTW"/>
+<fullyQualifiedTypeName name="gateway.AmbienteGTW"/>
+<fullyQualifiedTypeName name="gateway.MobiliaGTW"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-7-oracle">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/ant-antlr-1.6.3.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/antlr-2.7.5H3.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/asm.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/asm-attrs.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/cglib-2.1.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/commons-collections-2.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/dom4j-1.6.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/ehcache-1.1.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/hibernate3.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/hibernate-annotations-3.5.6-Final.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/jta.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/log4j-1.2.9.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/postgresql-9.3-1100-jdbc41.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/wloracle.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/hibernateLib/wlsqlserver.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/jstlLib/jstl.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/jstlLib/standard.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/javax.servlet-api-3.1.0.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/jars img/commons-fileupload-1.2.1.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/jars img/commons-fileupload-1.2.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/jars img/commons-fileupload-1.2.1-sources.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/jars img/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/jars img/commons-io-1.4-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/jars img/commons-io-1.4-sources.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/java-json.jar"/>
+	<classpathentry kind="lib" path="/home/patricia/Work/programs/javassist-3.12.0.GA (1).jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

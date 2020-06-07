@@ -1,0 +1,31 @@
+package entidades;
+
+import java.util.List;
+
+public abstract class Comodo {
+
+	private String id;
+	private String descricao;
+	
+	/*public Comodo(String id, String d){
+		setDescricao(d);
+		setId(id);
+	}
+	*/
+	
+	abstract public List<Mobilia> listaMobiliaDisponivel();
+	
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	
+}

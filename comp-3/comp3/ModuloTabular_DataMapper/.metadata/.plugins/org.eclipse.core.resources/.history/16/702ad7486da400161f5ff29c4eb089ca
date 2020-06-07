@@ -1,0 +1,12 @@
+package ts.comodo;
+
+import java.sql.SQLException;
+
+import dao.ComodoDAO;
+
+public class GetComodos_TS {
+
+	public void execute(String id){
+	}
+	
+}
